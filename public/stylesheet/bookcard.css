@@ -1,0 +1,27 @@
+.book-card {
+	float: left;
+	width: 25%;
+	padding: 1%;
+}
+
+.book-card .title {
+
+}
+
+.book-card .media {
+	text-align: center;
+}
+
+.book-card .media img {
+	width: 75%;
+}
+
+.book-card .copy {
+	text-align: center;
+}
+
+.book-card .link {
+	text-align: center;
+	height: 20px;
+	background-color: #cba3db;
+}
