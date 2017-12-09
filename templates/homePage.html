@@ -1,0 +1,66 @@
+<bookcard ng-repeat="book in books" data="book"></bookcard>
+<!-- Modal -->
+<div id="bookInfo" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{currentBookName}}</h4>
+                {{currentBookName}}
+            </div>
+            <div class="modal-body row">
+                <div class="col-md-5">
+                    <img ng-src='assets/{{currentBookImgUrl}}.png' />
+                </div>
+                <div class="col-md-7">
+                    MRP: xxxxx. <br />
+                    Price: YYYYY. <br />
+                    Edition: <br />
+                    Category: Fiction <br />
+                    Description/Synopsis: {{description}}
+                    <br />
+                    Quantity: <input type="number" id="quantity" ng-model="quantity" min="1" max="{{availableQuantity}}"/> <br />
+                    <button type="button" class="btn btn-primary" id="addtocart" ng-click="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cartInfo" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Your Cart</h4>
+            </div>
+            <div class="modal-body">
+                <div ng-repeat="(key, value) in cartItems" class="row">
+                    <div class="col-md-2" data-toggle="modal" data-target="#bookInfo" data-dismiss="modal">
+                        <img ng-src='assets/{{value.bookInfo.imgUrl}}.png' />
+                    </div>
+                    <div class="col-md-7">
+                        <h4>{{value.bookInfo.name}} By {{value.bookInfo.author}}</h4>
+                        <span>Edition: {{value.edition}}</span><span>Price: {{value.bookInfo.price}}</span><span>Quantity: {{value.Quantity}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="pull-left">{{value.Quantity * value.bookInfo.price}}</h3>
+                        <button type="button" class="close" ng-click="removeItem(key)">&times;</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 pull-left">
+                        <h3>Total</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="pull-left">{{cartValue}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
