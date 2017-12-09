@@ -3,6 +3,9 @@
 	width: 25%;
 	padding: 1%;
 }
+.book-card:hover {
+	transform: scale(1.2);
+}
 
 .book-card .title {
 

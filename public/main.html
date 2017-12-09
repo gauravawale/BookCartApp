@@ -7,7 +7,8 @@
  
  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-     <link rel="stylesheet" href="public/stylesheet/bookcard.css">
+    <link rel="stylesheet" href="public/stylesheet/bookcard.css">
+    <link rel="stylesheet" href="public/stylesheet/homepage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
  
@@ -16,12 +17,14 @@
 <body>
  
     <navbar></navbar>
+    <statusbar></statusbar>
     <div ng-view></div>
     <script type="text/javascript" src="public/script/angular.js"></script>
     <script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="public/script/cart.js"></script>
     <script type="text/javascript" src="public/script/directives/navbarDirective.js"></script>
     <script type="text/javascript" src="public/script/directives/bookcardDirective.js"></script>
+    <script type="text/javascript" src="public/script/services/authentication.service.js"></script>
 
  
 </body>

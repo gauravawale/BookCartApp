@@ -1,0 +1,15 @@
+.modal-body img {
+    width: 100%;
+}
+
+.modal-content {
+    height: 700px;
+}
+
+#quantity {
+    width: 50px;
+}
+
+[ng-view] {
+    margin-top: 10rem;
+}
